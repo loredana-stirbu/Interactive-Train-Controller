@@ -444,9 +444,9 @@ int main(void) {
     }
     //deschid fisierul de intrare si cel de iesire
     FILE *IN ;
-    IN= fopen("tema1.in", "r");
+    IN= fopen("train.in", "r");
     FILE *OUT ;
-    OUT= fopen("tema1.out", "w");
+    OUT= fopen("train.out", "w");
 
     int nr_comenzi;
     char linie[MAX_LINII],functia[MAX_CARACTERE],elem[MAX_CARACTERE];
