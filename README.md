@@ -1,16 +1,12 @@
 Pentru inceput in codul meu am definite 4 structuri de baza: Vagon-(un nod dintr-o lista dublu inlatuita sau o parte din trenul meu); Tren-(un tren fiind o listă dublu înlănțuită de vagoane cu locomotiva drept santinela si un mecanic); Comanda-(o comanda/functie intr-o coada); Coada-(o coadă de comenzi drept lista dublu inlantuita).
 
 Am implimentat un sir de functii ce lucreaza cu trenul meu.Dintre cele mai complicate mi s-au parut Search si Search right, deasemenea Execute si insasi Main.
-Mi-a luat cel mai mult timp, deoarece nu tratam toate cazurile.
 
 La functia SEARCH codul cu care am implimentat-o permite parcurgerea circulara a trenului, incepand de la vagonul mecanicului si pana la intoarcerea lui in acest vagon, aceasta parcurgere reprezentand o rotatie completa. Ideea principala era ca sa am un while care continua cat timp sirul nu a fost gasit si nu s-a indeplinit o rotatie completa , sau cat timp "iter" nu a revenit la vagonul mecanicului. In cadrul lui, pentru fiecare vagon(contor_iter), se verifica daca caracterul de la pozitia "i" se potriveste cu cel de la sirul cautat "s". Daca secventa cautata este gasita(sir_gasit==1), mecanicul este mutat la inceputul ei. Daca dupa o rotatie completa sirul nu e gasit, se afiseaza "ERROR". Dupa aceeasi idee mam condus si la celelalte 2 searchuri.
 
 La functia EXECUTE programul executa comenzi dintr-o coada. Dupa mai multa analiza a functiilor scanf, fgets etc., am ales sa folosec "sscanf". Din cate am inteles eu, aceasta descompune comenzile din coada. Acest lucru a fost util, deoarece am avut linii cum ar fi "WRITE X" ce aveau 2 componente, functia si parametrul sau. sscanf mi-a permis separarea usoara a acestora astfel identificand "WRITE" drept functie si "x" drept parametrul sau. Insasi la functia Execute, programul ia primul element din  coada si compara functia la element cu comenzile posibile, iar la urma elibereaza primul nod pentru a executa urmatoarea comanda la chemarea functiei Execute.
 
-Eliberarea memoriei nu mi s-a parut atat de grea intrucat am lucrat mult la laborator cu ea si am avut o idee destul de clara si stabila despre cum se face asta.
-
 La MAIN am inceput prin initializarea structurilor Tren si Coada, dar si prin deschideea fisierelor de citit si scris(IN & OUT). Din IN am extras numele functiei si parametrul sau(cu fgets si sscanf). In functie de comanda citita, am abordat diferit , inrucat erau 4 functii speciale: SHOW, SHOW_CURRENT, SWITCH si EXECUTE care trebuiau tratate separat si indata ce erau citite, in timp ce restul comenzilor au fost adaugate in coada. La finalul executiei, eliberez memoria pentru structurile Tren si Coada folosind o functie definita anterior(freeMem).
 
-Am avut multe probleme cu VALGRIND, am invatat sa lucrez si cu GDB dupa necesitate. Am reusit sa le prind mult mai bine dupa tema.
 
-FEEDBACK: Mi-a placut tema destul de mult, una dintre cele mai reusite in comparatie cu materiile din primul semestru. M-a pus sa inteleg listele dublu inlantuite si a fost destul de fun. Insasi conceptul cu trenulet si vagoane a fost unul destul de clar si distractiv de implementat. Putin mai greu cu implementatul de la 0 la tot codul +Makefile dar pana la urma i-am dat de cap.
+
