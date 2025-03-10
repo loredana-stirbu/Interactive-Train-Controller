@@ -1,4 +1,3 @@
-/*ȘTIRBU Loredana - 313 CD*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
